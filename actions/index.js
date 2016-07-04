@@ -6,3 +6,11 @@ export const hello = (text) => {
 		text
 	}
 }
+
+export const asyncHello = (text) => {
+	return dispatch => {
+		return setTimeout(()=>{
+			dispatch(hello(text));
+		},1000);
+	}
+}

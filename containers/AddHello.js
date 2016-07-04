@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import {connect} from 'react-redux';
-import {hello} from '../actions';
+import {asyncHello} from '../actions';
 
 let AddHello = ({ dispatch }) => {
   let input
@@ -11,12 +11,12 @@ let AddHello = ({ dispatch }) => {
         if (!input.value.trim()) {
           return
         }
-        dispatch(hello(input.value))
+        dispatch(asyncHello(input.value))
         input.value = ''
       }}>
   			<input type="text" ref={node=>{input=node}}/>
 		    <button type="submit">
-          hello
+          asyncHello
         </button>
       </form>
 		</div>
