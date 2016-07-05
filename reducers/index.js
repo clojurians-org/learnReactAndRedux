@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 
 const helloReducer = (state={ name:'默认'}, action) => {
-	switch (action.type){
+	switch(action.type){
 		case 'input_name':
 			return Object.assign({}, state, {name: action.name});
 		default:
@@ -9,8 +9,18 @@ const helloReducer = (state={ name:'默认'}, action) => {
 	}
 }
 
+const jsonReducer = (state={}, action) => {
+	switch(action.type){
+		case 'receive_posts':
+			return Object.assign({}, state, {jsonData: action.jsonData.data.children})
+		default:
+			return state;
+	}
+}
+
 const mainReducer = combineReducers({
-	helloReducer  
+	helloReducer,
+	jsonReducer
 });
 
 export default mainReducer;
