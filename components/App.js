@@ -1,12 +1,14 @@
 import React from 'react';
-import AddHello from '../containers/AddHello';
-import ShowHelloBox from '../containers/ShowHelloBox';
+import InputName from '../containers/inputName';
+import SayHello from '../containers/sayHello';
+import AsyncHello from '../containers/asyncHello';
 
-const App = () => (
-  <div>
-    <AddHello />
-    <ShowHelloBox />
-  </div>
+export default () => (
+	<div>
+    <div>同步:</div>
+		<InputName />
+    <div>异步:</div>
+    <AsyncHello />
+		<SayHello />
+	</div>
 )
-
-export default App

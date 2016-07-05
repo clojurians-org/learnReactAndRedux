@@ -1,16 +1,14 @@
-let nextNum = 0;
-export const hello = (text) => {
+export const commonHello = (name) => {
 	return {
-		type: 'HELLO',
-		num: nextNum++,
-		text
+		type:'input_name',
+		name
 	}
 }
 
-export const asyncHello = (text) => {
-	return dispatch => {
-		return setTimeout(()=>{
-			dispatch(hello(text));
-		},1000);
-	}
+export const asyncHello = (name) => {
+  return dispatch => {
+    return setTimeout(()=>{
+      dispatch(commonHello(name));
+    }, 1000);
+  }
 }

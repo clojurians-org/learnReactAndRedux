@@ -1,8 +1,16 @@
-import {combineReducers} from 'redux';
-import hello from './hello';
+import { combineReducers } from 'redux';
 
-const helloApp = combineReducers({
-	hello
+const helloReducer = (state={ name:'默认'}, action) => {
+	switch (action.type){
+		case 'input_name':
+			return Object.assign({}, state, {name: action.name});
+		default:
+			return state;
+	}
+}
+
+const mainReducer = combineReducers({
+	helloReducer  
 });
 
-export default helloApp;
+export default mainReducer;
