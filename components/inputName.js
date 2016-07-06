@@ -7,8 +7,8 @@ const inputNameComponent = React.createClass({
   render(){
     return (
       <div>
-  			<input type='text' ref="theInput"/>
-	  		<button onClick={this.handleChange}>sayHello!</button>
+  			<input className="form-control" type='text' ref="theInput"/>
+	  		<button className='btn btn-default' onClick={this.handleChange}>sayHello!</button>
 		  </div>
     )
   }

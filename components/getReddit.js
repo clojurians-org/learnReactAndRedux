@@ -6,9 +6,7 @@ const redditComponent = React.createClass({
   },
   render(){
     return (
-      <div>
-  		<button onClick={this.handleClick}>看看react的新闻</button>
-	  </div>
+		  <button className='btn btn-default' onClick={this.handleClick}>看看react的新闻</button>
     )
   }
 });

@@ -2,9 +2,7 @@ import React, { PropTypes } from 'react';
 
 const sayHelloComponent = ({name}) => {
 	return (
-		<div>
-			<p>hello, {name}</p>
-		</div>
+		<h1>hello, {name}</h1>
 	)
 }
 
