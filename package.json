@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "hjs-dev-server",
-    "build": "webpack"
+    "build": "webpack",
+    "test": "ava"
   },
   "author": "",
   "license": "ISC",
@@ -36,6 +37,16 @@
     "webpack": "^1.13.1"
   },
   "devDependencies": {
+    "ava": "^0.15.2",
     "redux-logger": "^2.6.1"
+  },
+  "babel": {
+    "presets": ["es2015", "react"] 
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ],
+    "babel": "inherit"
   }
 }
