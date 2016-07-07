@@ -1,8 +1,9 @@
 import React, { PropTypes } from 'react';
+import style from '../scss/bg.scss';
 
 const sayHelloComponent = ({name}) => {
 	return (
-		<h1>hello, {name}</h1>
+		<h1 className={style.className}>hello, {name}</h1>
 	)
 }
 
