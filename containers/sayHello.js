@@ -1,10 +1,10 @@
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import sayHelloComponent from '../components/sayHello';
 
 const mapStateToProps = (state) => {
-	return {
-		name: state.helloReducer.name
-	}
+  return {
+    name: state.helloReducer.name
+  }
 }
 
 const mapDispatchToProps = () => {
@@ -12,7 +12,7 @@ const mapDispatchToProps = () => {
 }
 
 const sayHelloContainer = connect(
-	mapStateToProps,
+  mapStateToProps,
   mapDispatchToProps
 )(sayHelloComponent);
 

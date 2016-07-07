@@ -1,15 +1,14 @@
-import { connect } from 'react-redux';
-import { asyncHello } from '../actions';
+import {connect} from 'react-redux';
 import inputNameComponent from '../components/inputName';
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = () => {
   return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    handleClick: (theInputValue) => {
-      dispatch(asyncHello(theInputValue));
+    handleClick: (name) => {
+      dispatch({type: 'async_hello', name});
     }
   }
 }

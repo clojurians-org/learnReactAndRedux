@@ -1,16 +1,15 @@
-import { connect } from 'react-redux';
-import { fetchPosts } from '../actions';
+import {connect} from 'react-redux';
 import getRedditComponent from '../components/getReddit';
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = () => {
   return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
   return {
-  	getJson: () => {
-  		dispatch(fetchPosts())
-  	}
+    getJson: () => {
+      dispatch({type: 'fetch_posts'});
+    }
   }
 }
 

@@ -1,26 +1,30 @@
 import './node_modules/bootstrap/dist/css/bootstrap.min.css';
+import 'babel-polyfill';
 import React from 'react';
 import { render } from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
 import App from './components/app';
 import mainReducer from './reducers';
 import { Provider } from 'react-redux';
-import thunkMiddleware from 'redux-thunk';
+import createSagaMiddleware from 'redux-saga';
 import createLogger from 'redux-logger';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
+import { mySaga } from './sagas';
 
+const sagaMiddleware = createSagaMiddleware();
 const loggerMiddleware = createLogger();
 const configureStore = (initialState) => {
   return createStore(
     mainReducer,
     initialState,
     applyMiddleware(
-      thunkMiddleware,
+      sagaMiddleware,
       loggerMiddleware
     )
   )
 }
 const store = configureStore();
+sagaMiddleware.run(mySaga);
 
 /* Router的component，就不写过去了，没几行 */
 const Users = () => {

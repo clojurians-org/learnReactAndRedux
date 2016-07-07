@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-fetch';
-
 export const commonHello = (name) => {
 	return {
 		type:'input_name',
@@ -7,25 +5,10 @@ export const commonHello = (name) => {
 	}
 }
 
-export const asyncHello = (name) => {
-  return dispatch => {
-    return setTimeout(()=>{
-      dispatch(commonHello(name));
-    }, 1000);
+export const receivePosts = (jsonData) => {
+  console.log('receivePosts')
+  return {
+    type:'receive_posts',
+    jsonData
   }
-}
-
-const receivePosts = (jsonData) => {
-	return {
-		type:'receive_posts',
-		jsonData
-	}
-}
-
-export const fetchPosts = () => {
-	return dispatch => {
-		return fetch(`http://www.reddit.com/r/reactjs.json`)
-		.then(response => response.json())
-		.then(json => dispatch(receivePosts(json)))
-	}
 }

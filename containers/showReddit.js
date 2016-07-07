@@ -13,7 +13,7 @@ const mapDispatchToProps = () => {
 
 const showRedditContainer = connect(
 	mapStateToProps,
-  	mapDispatchToProps
+	mapDispatchToProps
 )(showRedditComponent);
 
 export default showRedditContainer;

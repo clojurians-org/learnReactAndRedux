@@ -1,22 +1,22 @@
-import { connect } from 'react-redux';
-import { commonHello } from '../actions';
+import {connect} from 'react-redux';
+import * as actions from '../actions';
 import inputNameComponent from '../components/inputName';
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = () => {
   return {}
 }
 
 const mapDispatchToProps = (dispatch) => {
-	return {
-		handleClick: (theInputValue) => {
-      dispatch(commonHello(theInputValue));
-		}
-	}
+  return {
+    handleClick: (theInputValue) => {
+      dispatch(actions.commonHello(theInputValue));
+    }
+  }
 }
 
 const inputNameContainer = connect(
   mapStateToProps,
-	mapDispatchToProps
+  mapDispatchToProps
 )(inputNameComponent);
 
 export default inputNameContainer;

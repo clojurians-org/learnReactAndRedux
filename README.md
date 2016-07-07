@@ -1,14 +1,12 @@
 # 学习 react 和 redux 最简例子
 
-
-更新了样式，现在美观点了
-
-
 ### 主要使用的技术
 - [x] bootstrap
 - [x] react
 - [x] router
 - [x] redux
+- [x] redux-saga
+- [x] fetch
 - [x] webpack
 - [x] css-module
 - [x] ES2015
@@ -38,7 +36,11 @@ npm run build
 
 ### 下一步计划
 - [x] 对比 redux-thunk 、 redux-promise 、 redux-saga
-- [ ] 决定将 redux-thunk 迁移到 redux-saga(https://github.com/yelouafi/redux-saga)
+1. redux-thunk `入门版` 在 flux 上的进步
+2. redux-promise `专业版` 优势async/await
+3. redux-sage `旗舰版` 使 action 变的更纯粹;增加了 task 概念
+- [x] 决定将 redux-thunk 迁移到 redux-saga(https://github.com/yelouafi/redux-saga)
+- [x] 迁移完成
 
 备选方案 dva(https://github.com/sorrycc/dva) 暂时不进行迁移，感觉封装以后失去了组件思想的优势，个人感觉不该往rails这条路上走，尽管rails很优秀
 
