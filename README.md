@@ -37,7 +37,8 @@ npm run build
 ```
 
 ### 下一步计划
-- [ ] 将 redux-thunk 迁移到 redux-saga
+- [ ] 将 redux-thunk 迁移到 redux-saga(https://github.com/yelouafi/redux-saga)
+- [ ] 将 redux-saga 迁移到 dva(https://github.com/sorrycc/dva)
 
 ------
 刚刚入门，先分享出来，有问题可以一起讨论一下
