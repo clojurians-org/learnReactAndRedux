@@ -41,7 +41,7 @@ npm run build
 3. redux-sage `旗舰版` 使 action 变的更纯粹;增加了 task 概念
 - [x] 决定将 redux-thunk 迁移到 redux-saga(https://github.com/yelouafi/redux-saga)
 - [x] 迁移完成
-- [ ] 制作自用 yeoman generator
+- [x] 制作自用 yeoman generator
 
 
 备选方案 dva(https://github.com/sorrycc/dva) 暂时不进行迁移，感觉封装以后失去了组件思想的优势，个人感觉不该往rails这条路上走，尽管rails很优秀
