@@ -11,6 +11,13 @@ import createLogger from 'redux-logger';
 import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 import { mySaga } from './sagas';
 
+/* 自制一个中间件 */
+const heher = store => next => action => {
+  console.log('hehe');
+  let result = next(action);
+  return result;
+}
+
 const sagaMiddleware = createSagaMiddleware();
 const loggerMiddleware = createLogger();
 const configureStore = (initialState) => {
@@ -18,6 +25,7 @@ const configureStore = (initialState) => {
     mainReducer,
     initialState,
     applyMiddleware(
+      heher,
       sagaMiddleware,
       loggerMiddleware
     )
@@ -50,10 +58,16 @@ const NoMatch = () => {
   )
 }
 
+const onEnterFn = (nextState, replace, next) => {
+  console.log(`权限判断，如登录状态判断，${nextState}`);
+  // replace('/'); 
+  next();
+}
+
 render((
     <Provider store={store}>
       <Router history={browserHistory}>
-        <Route path="/">
+        <Route path="/" onEnter={onEnterFn}>
           <IndexRoute component={App}/>
           <Route path="app" component={App}></Route>
           <Route path="users">
