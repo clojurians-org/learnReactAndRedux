@@ -27,6 +27,7 @@
     "postcss-loader": "^0.9.1",
     "react": "^15.1.0",
     "react-dom": "^15.2.0",
+    "react-hot-loader": "^3.0.0-beta.2",
     "react-redux": "^4.4.5",
     "react-router": "^2.5.1",
     "redux": "^3.5.2",
@@ -44,7 +45,14 @@
     "presets": [
       "es2015",
       "react"
-    ]
+    ],
+    "env": {
+      "development": {
+        "plugins": [
+          "react-hot-loader/babel"
+        ]
+      }
+    }
   },
   "ava": {
     "require": [

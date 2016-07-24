@@ -1,6 +1,6 @@
 var getConfig = require('hjs-webpack');
 var isDev = process.env.NODE_ENV !== 'production'
-module.exports = getConfig({
+var config = getConfig({
   in: './index.js',
   out: 'dist',
   clearBeforeBuild: true,
@@ -9,3 +9,10 @@ module.exports = getConfig({
   	hash:true
   }
 });
+
+if(isDev){
+  config.entry[0] = config.entry[0] + '?reload=true';
+  config.entry.unshift('react-hot-loader/patch');
+}
+
+module.exports = config;
