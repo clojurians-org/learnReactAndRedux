@@ -4,7 +4,7 @@ import getRedditComponent from '../components/getReddit';
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
-  getJson: () => {
+  getJson() {
     dispatch({type: 'fetch_posts'});
   }
 })

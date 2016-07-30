@@ -4,7 +4,7 @@ import inputNameComponent from '../components/inputName';
 const mapStateToProps = () => ({})
 
 const mapDispatchToProps = (dispatch) => ({
-  handleClick: (name) => {
+  handleClick(name) {
     dispatch({type: 'async_hello', name});
   }
 })

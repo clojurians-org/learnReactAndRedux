@@ -13,7 +13,6 @@ import { mySaga } from './sagas';
 
 /* 自制一个中间件 */
 const heher = store => next => action => {
-  console.log('hehe');
   let result = next(action);
   return result;
 }

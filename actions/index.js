@@ -3,6 +3,6 @@ export const commonHello = (name) => ({
   name
 });
 export const receivePosts = (jsonData) => ({
-    type:'receive_posts',
-    jsonData
+  type:'receive_posts',
+  jsonData
 });

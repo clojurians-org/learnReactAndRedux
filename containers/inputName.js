@@ -5,7 +5,7 @@ import inputNameComponent from '../components/inputName';
 const mapStateToProps = () => ({});
 
 const mapDispatchToProps = (dispatch) => ({
-  handleClick: (theInputValue) => {
+  handleClick(theInputValue) {
     dispatch(actions.commonHello(theInputValue));
   }
 });
