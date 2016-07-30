@@ -1,14 +1,8 @@
-export const commonHello = (name) => {
-	return {
-		type:'input_name',
-		name
-	}
-}
-
-export const receivePosts = (jsonData) => {
-  console.log('receivePosts')
-  return {
+export const commonHello = (name) => ({
+  type:'input_name',
+  name
+});
+export const receivePosts = (jsonData) => ({
     type:'receive_posts',
     jsonData
-  }
-}
+});

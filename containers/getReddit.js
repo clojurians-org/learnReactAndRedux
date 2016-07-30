@@ -1,17 +1,13 @@
 import {connect} from 'react-redux';
 import getRedditComponent from '../components/getReddit';
 
-const mapStateToProps = () => {
-  return {}
-}
+const mapStateToProps = () => ({});
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    getJson: () => {
-      dispatch({type: 'fetch_posts'});
-    }
+const mapDispatchToProps = (dispatch) => ({
+  getJson: () => {
+    dispatch({type: 'fetch_posts'});
   }
-}
+})
 
 const getRedditContainer = connect(
   mapStateToProps,

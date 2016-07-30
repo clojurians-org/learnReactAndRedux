@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const inputNameComponent = React.createClass({
-  handleChange: function() {
+  handleChange () {
     this.props.handleClick(this.refs.theInput.value);
   },
   render(){

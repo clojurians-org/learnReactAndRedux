@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const redditComponent = React.createClass({
-  handleClick: function() {
+  handleClick() {
     this.props.getJson();
   },
   render(){
